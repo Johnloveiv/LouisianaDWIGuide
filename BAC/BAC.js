@@ -17,12 +17,16 @@ function solveBAC(form) {
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
+            data.status = 'sober';
         } else if (BAC === 'NaN') {
             data.message = 'Please try again.';
+            data.status = 'error';
         } else if (BAC > 0.08){
             data.message = 'Under Louisiana Law You are Intoxicated.';
+            data.status = 'drunk';
         } else if (BAC < 0.08){
             data.message = 'You are not legally intoxicated';
+            data.status = 'sober';
         }
 
     } else {
@@ -57,6 +61,5 @@ $('form').submit(function (e){
     });
 
     var calculation = solveBAC(form);
-    $('#result').html(calculation.result + ' %');
-    $('#message').html(calculation.message);
+    $('#result .display').html('<h4>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-danger');
 });
