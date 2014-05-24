@@ -67,14 +67,15 @@ $('form').submit(function (e){
     var calculation = solveBAC(form);
 
     if (calculation.status === 'drunk'){
-
-        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-danger');
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>&nbsp' +
+        calculation.result.toFixed(3) +
+        ' %</h4>' + calculation.message) .addClass('alert alert-danger');
     } else if (calculation.status === 'sober'){
-
-        $('#result .display').html('<h4><span class="glyphicon glyphicon-ok"></span>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-success');
-
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-ok"></span>&nbsp' +
+        calculation.result.toFixed(3) +
+        ' %</h4>' + calculation.message).addClass('alert alert-success');
     } else {
-
-        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>u' + calculation.message + ' %</h4>').addClass('alert alert-danger');
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>&nbsp' +
+        calculation.message + ' %</h4>').addClass('alert alert-danger');
     }
 });
