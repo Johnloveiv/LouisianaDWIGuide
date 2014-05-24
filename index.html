@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
-  <meta charset="utf-8">
-  <title>Blood Alcohol Calculator</title>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blood Alcohol Calculator</title>  
+    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
 <form role="form">
   <div class="form-group">
     <label for="ounces">Number of Ounces Consumed</label>
-    <input type="number" class="form-control" id="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
+    <input type="number" class="form-control" name="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
   </div>
     
    <div class="form-group">
     <label for="percent">Percentage of the Alcohol Consumed</label>
-    <input type="number" class="form-control" id="percent" placeholder="Please check the Alcohol Content per Volume">
+    <input type="number" class="form-control" name="percent" placeholder="Please check the Alcohol Content per Volume">
   </div>
  
   <div class="form-group">
     <label for "weight">Enter Your Weight (lbs.)</label>
-    <input type="number" class="form-control"  id="weight" >
+    <input type="number" class="form-control"  name="weight" >
   </div>
   
   <div class="form-group">
     <label for="hours">Number of Hours</label>
-    <input class="form-control" id="hours" placeholder="Number of Hours That Have Passed">
+    <input class="form-control" name="hours" placeholder="Number of Hours That Have Passed">
   </div>
     
   <div class="form-group">
     <label for="gender">Gender</label>
-    <select class="form-control" id="gender">
-      <option value="true">Male</option>
-      <option value="false" selected=selected>Female</option>
+    <select class="form-control" name="gender">
+      <option value="male" selected=selected>Male</option>
+      <option value="female">Female</option>
     </select>
   </div>
     
@@ -43,5 +42,8 @@
   <div id="result"></div>
   <div id="message"></div>
 </div>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+<script src="BAC/BAC.js"></script>
 </body>
 </html>
