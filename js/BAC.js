@@ -138,3 +138,8 @@ $('form').bootstrapValidator({
         }
     }
 });
+
+//Handle Redo
+$('.redo').click(function (){
+    location.reload();
+});
