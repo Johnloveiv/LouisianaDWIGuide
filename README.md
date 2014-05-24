@@ -1,7 +1,7 @@
 LouisianaDWIGuide
 =================
 
-Calculate blood alchol level under Louisiana Law.
+Calculate blood alcohol level under Louisiana Law.
 
 ## Demo
 
