@@ -35,12 +35,16 @@ function solveBAC(form) {
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
+            data.status = 'sober';
         } else if (BAC === 'NaN'){
             data.message = 'Please try again.';
+            data.status = 'error';
         } else if (BAC > 0.08){
             data.message = 'Under Louisiana Law You are Intoxicated.';
+            data.status = 'drunk';
         } else if (BAC < 0.08){
             data.message = 'You are not legally intoxicated';
+            data.status = 'sober';
         }
 
     }
@@ -61,5 +65,16 @@ $('form').submit(function (e){
     });
 
     var calculation = solveBAC(form);
-    $('#result .display').html('<h4>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-danger');
+
+    if (calculation.status === 'drunk'){
+
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-danger');
+    } else if (calculation.status === 'sober'){
+
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-ok"></span>' + calculation.result + ' %</h4>' + calculation.message).addClass('alert alert-success');
+
+    } else {
+
+        $('#result .display').html('<h4><span class="glyphicon glyphicon-warning-sign"></span>u' + calculation.message + ' %</h4>').addClass('alert alert-danger');
+    }
 });

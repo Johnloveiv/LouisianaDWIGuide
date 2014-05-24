@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blood Alcohol Calculator</title>  
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrapValidator.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
 <form role="form">
   <div class="form-group">
     <label for="ounces">Number of Ounces Consumed</label>
-    <input type="number" class="form-control" name="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
+    <input type="number" class="form-control required" name="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
   </div>
     
    <div class="form-group">
     <label for="percent">Percentage of the Alcohol Consumed</label>
-    <input type="number" class="form-control" name="percent" placeholder="Please check the Alcohol Content per Volume">
+    <input type="number" class="form-control required" name="percent" placeholder="Please check the Alcohol Content per Volume">
   </div>
  
   <div class="form-group">
     <label for "weight">Enter Your Weight (lbs.)</label>
-    <input type="number" class="form-control"  name="weight" >
+    <input type="number" class="form-control required"  name="weight" >
   </div>
   
   <div class="form-group">
     <label for="hours">Number of Hours</label>
-    <input class="form-control" name="hours" placeholder="Number of Hours That Have Passed">
+    <input class="form-control required" name="hours" placeholder="Number of Hours That Have Passed">
   </div>
     
   <div class="form-group">
@@ -39,14 +40,16 @@
     
   <button type="submit" class="btn btn-default">Calculate BAC</button>
 </form>
-  <div id="result"> 
+<div id="result"> 
     <div class="display">
 
     </div>
   </div>
 </div>
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
-<script src="BAC/BAC.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrapValidator.min.js"></script>
+<script src="js/BAC.js"></script>
+<script src="js/validate.js"></script>
 </body>
 </html>
