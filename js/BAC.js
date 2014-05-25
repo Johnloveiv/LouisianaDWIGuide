@@ -13,7 +13,7 @@ function solveBAC(form) {
     if (gender === 'male') {
 
         // This is the formula for males
-        BAC = (((.8 * ounces) / (weight * 16 * .68) - (hours * 0.00015)) * 100);
+        BAC = (ounces * percent * 5.14 / ( weight * .73)) - (hours * 0.15);
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
@@ -31,7 +31,7 @@ function solveBAC(form) {
 
     } else {
 
-        BAC = (((.8 * ounces) / (weight * 16 * .55) - (hours * 0.00017)) * 100);
+        BAC = (ounces * percent * 5.14 / ( weight * .66)) - (hours * 0.15);
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
