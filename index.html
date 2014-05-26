@@ -1,58 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blood Alcohol Calculator</title>  
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrapValidator.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div class="container">
-<form role="form">
-  <div class="form-group">
-    <label for="ounces">Number of Ounces Consumed</label>
-    <input type="text" class="form-control required" name="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
-  </div>
-    
-   <div class="form-group">
-    <label for="percent">Percentage of the Alcohol Consumed</label>
-    <input type="text" class="form-control required" name="percent" placeholder="Please check the Alcohol Content per Volume">
-  </div>
- 
-  <div class="form-group">
-    <label for "weight">Enter Your Weight (lbs.)</label>
-    <input type="text" class="form-control required"  name="weight" >
-  </div>
-  
-  <div class="form-group">
-    <label for="hours">Number of Hours</label>
-    <input type="text" class="form-control required" name="hours" placeholder="Number of Hours That Have Passed">
-  </div>
-    
-  <div class="form-group">
-    <label for="gender">Gender</label>
-    <select class="form-control" name="gender">
-      <option value="male" selected=selected>Male</option>
-      <option value="female">Female</option>
-    </select>
-  </div>
-    
-  <button type="submit" name="submit" class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span> Calculate BAC</button>
-  <button type="button" class="btn btn-default redo"><span class="glyphicon glyphicon-repeat"></span> Redo</button>
-</form>
-<hr>
-<div id="result"> 
-    <div class="display">
-    </div>
-</div>
-</div>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrapValidator.min.js"></script>
-<script src="js/BAC.js"></script>
-</body>
-
 </div>
 </div>
 <script src="js/jquery.min.js"></script>
@@ -105,4 +52,56 @@
     </ul>
   </div>
 </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blood Alcohol Calculator</title>  
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrapValidator.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+<form role="form">
+  <div class="form-group">
+    <label for="ounces">Number of Ounces Consumed</label>
+    <input type="text" class="form-control required" name="ounces" placeholder="Beer-12oz. Wine-5oz. Liquor-1.5oz ">
+  </div>
+    
+   <div class="form-group">
+    <label for="percent">Percentage of the Alcohol Consumed</label>
+    <input type="text" class="form-control required" name="percent" placeholder="Please check the Alcohol Content per Volume">
+  </div>
+ 
+  <div class="form-group">
+    <label for "weight">Enter Your Weight (lbs.)</label>
+    <input type="text" class="form-control required"  name="weight" >
+  </div>
+  
+  <div class="form-group">
+    <label for="hours">Number of Hours</label>
+    <input type="text" class="form-control required" name="hours" placeholder="Number of Hours That Have Passed">
+  </div>
+    
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select class="form-control" name="gender">
+      <option value="male" selected=selected>Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div>
+    
+  <button type="submit" name="submit" class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span> Calculate BAC</button>
+  <button type="button" class="btn btn-default redo"><span class="glyphicon glyphicon-repeat"></span> Redo</button>
+</form>
+<hr>
+<div id="result"> 
+    <div class="display">
+    </div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrapValidator.min.js"></script>
+<script src="js/BAC.js"></script>
+</body>
 </html>
