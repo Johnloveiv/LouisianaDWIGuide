@@ -13,7 +13,11 @@ function solveBAC(form) {
     if (gender === 'male') {
 
         // This is the formula for males
+<<<<<<< HEAD
         BAC = (ounces * (percent / 100) * 5.14) / (weight * .73) - (hours * 0.015);
+=======
+        BAC = (ounces * (percent / 100) * 5.14) / (weight * (73 / 100)) - (hours * 0.015);
+>>>>>>> da6a86edb9570586529cd1c9d3c4721f65957d73
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
@@ -31,7 +35,11 @@ function solveBAC(form) {
 
     } else {
 
+<<<<<<< HEAD
         BAC = (ounces * (percent / 100) * 5.14) / (weight * .66) - (hours * 0.015);
+=======
+        BAC = (ounces * (percent / 100) * 5.14) / (weight * (66 / 100)) - (hours * 0.015);
+>>>>>>> da6a86edb9570586529cd1c9d3c4721f65957d73
 
         if (BAC < 0) {
             data.message = 'You are not legally intoxicated.';
@@ -99,7 +107,7 @@ $('form').bootstrapValidator({
                 numeric: {
                     message: 'This field must be numbers only'
                 }
-            },
+            }
         },
         ounces: {
             validators: {
